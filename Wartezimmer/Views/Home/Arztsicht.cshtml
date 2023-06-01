@@ -1,0 +1,54 @@
+﻿@model string
+@{
+    Layout = null;
+    string next = "leer";
+    if (Patienten.Schlange.Count == 0)
+    {
+        next = "keine Patienten mehr im Warteraum";
+    } else {
+        next = Model;
+    }
+    int anzahl = Patienten.Schlange.Count();
+}
+<!DOCTYPE html>
+<html>
+    <head>
+                <title>Arzt Page</title>
+        <style>
+            .center {
+                text-align: center;
+            }
+        .button {
+            width: 120px;
+            height: 60px;
+            color: #FFFFFF;
+            padding: 0px;
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            margin: 0px
+        }
+        </style>
+    <table>
+        <tr>
+            <td><a asp-action="Index"><button type="button">Home</button></a></td>
+            <td><a asp-action="PatientenListe"><button type="button">Warteraum</button></a></td>
+            <td> <a asp-action="Arztsicht"><button type="button">Arzt</button> </a></td>
+            <td>  <a asp-action="Eingabe"><button type="button">Arzthelfer</button></a></td>
+        </tr>
+    </table>
+      </head>
+<body>
+    <label asp-for="@anzahl">Patienten-Anzahl: </label>
+    <input asp-for="@anzahl" />
+    <h1>Patienten</h1>
+    <div class="center">
+        <label asp-for="@next">Patienten-Daten: </label>
+        <label asp-for="@next">@next</label>
+        <div class="button">
+        <a asp-action="NextArztsicht"><button type="button">Nächster</button></a>
+		</div>
+	</div>
+
+</body>
+</html>

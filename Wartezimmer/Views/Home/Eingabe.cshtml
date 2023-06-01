@@ -1,0 +1,87 @@
+﻿@model Wartezimmer.Models.Patient
+@{
+	Layout = null;
+	int anzahl = Patienten.Schlange.Count();
+	int? nr = anzahl + 1;
+	if (anzahl > 0) {
+		nr = Patienten.Schlange.Last().PNr + 1;
+	}	
+}
+
+<head>
+	<style>
+		.center {
+			text-align: center;
+		}
+
+		.button {
+			width: 120px;
+			height: 60px;
+			color: #FFFFFF;
+			padding: 0px;
+			border-radius: 0px;
+			-moz-border-radius: 0px;
+			-webkit-border-radius: 0px;
+			margin: 0px
+		}
+	</style>
+	<table>
+		<tr>
+			<td><a asp-action="Index"><button type="button">Home</button></a></td>
+			<td><a asp-action="PatientenListe"><button type="button">Warteraum</button></a></td>
+			<td> <a asp-action="Arztsicht"><button type="button">Arzt</button> </a></td>
+			<td>  <a asp-action="Eingabe"><button type="button">Arzthelfer</button></a></td>
+		</tr>
+	</table>
+</head>
+<div class="center">
+	<label asp-for="@anzahl">Patienten-Anzahl: </label>
+	<input asp-for="@anzahl" />
+	<form asp-action="Eingabe" method="post">
+    <table>
+			<tr>
+				<td><label asp-for="PNr" >PNr</label></td>
+				<td><input asp-for="PNr" value="@nr" /></td>
+		</tr>
+			<tr>
+				<td><label asp-for="Anrede">Anrede</label></td>
+				<td><input asp-for="Anrede" /></td>
+		</tr>
+			<tr>
+				<td><label asp-for="Vorname">Vornamet</label></td>
+				<td><input asp-for="Vorname" /></td>
+		</tr>
+			<tr>
+				<td><label asp-for="Name">Name</label></td>
+				<td><input asp-for="Name" /></td>
+		</tr>
+			<tr>
+				<td><label asp-for="Plz">Plz</label></td>
+				<td><input asp-for="Plz" /></td>
+		</tr>
+			<tr>
+				<td><label asp-for="Ort">Ort</label></td>
+				<td><input asp-for="Ort" /></td>
+		</tr>
+			<tr>
+				<td><label asp-for="Strasse">Straße</label></td>
+				<td><input asp-for="Strasse" /></td>
+		</tr>
+			<tr>
+				<td><label asp-for="Hausnummer">Hausnummer der Patient</label></td>
+				<td><input asp-for="Hausnummer" /></td>
+		</tr>
+	</table>
+		<div class="button">
+			<button type="Submit">Speichern</button>
+		</div>
+</form>
+</div>
+
+
+
+
+
+
+
+

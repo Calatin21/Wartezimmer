@@ -1,0 +1,56 @@
+﻿@model Queue<Patient>?
+    @{
+        Layout = null;
+    }
+<head> 
+    <style>
+        .center {
+            text-align: center;
+        }
+        .button {
+            width: 120px;
+            height: 60px;
+            color: #FFFFFF;
+            padding: 0px;
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            margin: 0px
+        }
+    </style>
+    <table>
+        <tr>
+            <td><a asp-action="Index"><button type="button">Home</button></a></td>
+            <td><a asp-action="PatientenListe"><button type="button">Warteraum</button></a></td>
+            <td> <a asp-action="Arztsicht"><button type="button">Arzt</button> </a></td>
+            <td>  <a asp-action="Eingabe"><button type="button">Arzthelfer</button></a></td>
+        </tr>
+    </table>
+</head>
+<body>
+   <h2>Here is the list of the Patienten</h2>
+   <table>
+       <thead>
+            <tr><th>PNr</th><th>Anrede</th><th>Vorname</th><th>Name</th><th>Postleitzahl</th><th>Ort</th><th>Strasse</th><th>Hausnummer</th><th>Actions</th>
+       </thead>
+       <tbody>  
+           @foreach(Patient q in Model){
+         <tr>  
+             <td>@q.PNr</td>
+             <td>@q.Anrede</td>
+             <td>@q.Vorname</td>
+             <td>@q.Name</td>
+             <td>@q.Plz</td>
+             <td>@q.Ort</td>
+             <td>@q.Strasse</td>
+             <td>@q.Hausnummer</td>
+             <td>
+                 <form asp-action="Delete" asp-route-id="@q.PNr" method="post">
+                        <button type="submit">Delete</button>
+                        </form>
+              </td>
+         </tr>
+           }        
+       </tbody>
+	</table>
+</body>
