@@ -3,21 +3,7 @@
         Layout = null;
     }
 <head> 
-    <style>
-        .center {
-            text-align: center;
-        }
-        .button {
-            width: 120px;
-            height: 60px;
-            color: #FFFFFF;
-            padding: 0px;
-            border-radius: 0px;
-            -moz-border-radius: 0px;
-            -webkit-border-radius: 0px;
-            margin: 0px
-        }
-    </style>
+    <title>Patienten Liste</title>   
     <nav>
         <a asp-action="Index"><button type="button">Home</button></a>
         <a asp-action="PatientenListe"><button type="button">Warteraum</button></a>
@@ -26,7 +12,7 @@
     </nav>
 </head>
 <body>
-   <h2>Here is the list of the Patienten</h2>
+   <h2>Patienten Liste:</h2>
    <table>
        <thead>
             <tr><th>PNr</th><th>Anrede</th><th>Vorname</th><th>Name</th><th>Postleitzahl</th><th>Ort</th><th>Strasse</th><th>Hausnummer</th><th>Actions</th>

@@ -2,6 +2,9 @@
 @{
     Layout = null;
     string next = "keine Patienten im Warteraum";
+    if (Patienten.Schlange.Count() != 0) {
+        next = "leer";
+    }
     if (Model != null) {
         next = Model;
     }    
@@ -9,23 +12,9 @@
 }
 <!DOCTYPE html>
 <html>
+
     <head>
-                <title>Arzt Page</title>
-        <style>
-            .center {
-                text-align: center;
-            }
-        .button {
-            width: 120px;
-            height: 60px;
-            color: #FFFFFF;
-            padding: 0px;
-            border-radius: 0px;
-            -moz-border-radius: 0px;
-            -webkit-border-radius: 0px;
-            margin: 0px
-        }
-        </style>
+        <title>Arzt Seite</title>
     <nav>       
             <a asp-action="Index"><button type="button">Home</button></a>
             <a asp-action="PatientenListe"><button type="button">Warteraum</button></a>
@@ -36,7 +25,7 @@
 <body>
     <label asp-for="@anzahl">Patienten-Anzahl: </label>
     <input asp-for="@anzahl" />
-    <h1>Patienten</h1>
+    <h1>Patient</h1>
     <div class="center">
         <label asp-for="@next">Patienten-Daten: </label>
         <label asp-for="@next">@next</label>
