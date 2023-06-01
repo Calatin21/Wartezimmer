@@ -7,14 +7,12 @@
     <head>
         <title>Index</title>
         <link rel="stylesheet" href="~/css/StyleSheet.css" />
-    <table>
-        <tr>
-		    <td> <a asp-action="Index"><button type="button">Home</button></a></td>
-            <td> <a asp-action="PatientenListe"><button type="button">Warteraum</button></a></td>
-            <td> <a asp-action="Arztsicht"><button type="button">Arzt</button> </a></td>
-			<td>  <a asp-action="Eingabe"><button type="button">Arzthelfer</button></a></td>
-		</tr>
-	</table>
+    <nav>
+        <a asp-action="Index"><button type="button">Home</button></a>
+        <a asp-action="PatientenListe"><button type="button">Warteraum</button></a>
+        <a asp-action="Arztsicht"><button type="button">Arzt</button> </a>
+        <a asp-action="Eingabe"><button type="button">Arzthelfer</button></a>
+    </nav>
     </head>
 <body>
 	<div class="center">
@@ -25,9 +23,7 @@
             <td><a asp-action="PatientenListe"><button type="button">Warteraum</button></a></td>
             <td><img class="wartezimmer" src="~/wz.jpg" width="300" height="200" /></td>
         </tr>
-        <tr>    
-            
-       
+        <tr>                
             <td> <a asp-action="Arztsicht"><button type="button">Arzt</button> </a></td>
             <td><img class="arzt" src="~/arzt.gif" width="200" height="150" /></td>
         </tr>                       

@@ -11,7 +11,7 @@
         public ViewResult Eingabe(Patient patient) {
             Patienten.AddPatient(patient);
             return View();
-        }       
+        }
         public ViewResult Arztsicht() {          
             return View();
         }
