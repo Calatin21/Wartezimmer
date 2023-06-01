@@ -25,14 +25,12 @@
 			margin: 0px
 		}
 	</style>
-	<table>
-		<tr>
-			<td><a asp-action="Index"><button type="button">Home</button></a></td>
-			<td><a asp-action="PatientenListe"><button type="button">Warteraum</button></a></td>
-			<td> <a asp-action="Arztsicht"><button type="button">Arzt</button> </a></td>
-			<td>  <a asp-action="Eingabe"><button type="button">Arzthelfer</button></a></td>
-		</tr>
-	</table>
+	<nav>
+		<a asp-action="Index"><button type="button">Home</button></a>
+		<a asp-action="PatientenListe"><button type="button">Warteraum</button></a>
+		<a asp-action="Arztsicht"><button type="button">Arzt</button> </a>
+		<a asp-action="Eingabe"><button type="button">Arzthelfer</button></a>
+	</nav>
 </head>
 <div class="center">
 	<label asp-for="@anzahl">Patienten-Anzahl: </label>
