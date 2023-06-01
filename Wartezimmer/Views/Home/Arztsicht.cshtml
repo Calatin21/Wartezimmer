@@ -2,6 +2,9 @@
 @{
     Layout = null;
     string next = "keine Patienten im Warteraum";
+    if (Patienten.Schlange.Count() != 0) {
+        next = "leer";
+    }
     if (Model != null) {
         next = Model;
     }    
