@@ -2,25 +2,14 @@
     text-align: center;
 }
 
-.button {
-    width: 120px;
-    height: 60px;
-    color: #FFFFFF;
-    padding: 0px;
-    border-radius: 0px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    margin: 0px
+* {
+    font-family: Montserrat, sans-serif;
 }
 
 nav ul{
    list-style: none;
    padding: 0;
    margin: 0;
-}
-
-*{
-   font-family: Montserrat, sans-serif;
 }
 
 nav {
@@ -34,15 +23,13 @@ li {
 
 nav a {
     text-decoration: none;
-    color: aquamarine;
+    color: #F0F8FF;
 }
 
 h1 {
-    background-color: #98FB98;
+    background-color: #3CB371;
     color: white;
+    top: 50px;
 }
 
-button:hover {
-    background-color: palevioletred;
-}
 
