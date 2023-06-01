@@ -16,7 +16,7 @@
             return View();
         }
         public ViewResult NextArztsicht() {
-            string patient = "keine Patienten mehr im Warteraum";
+            string patient = "keine Patienten im Warteraum";
             if (Patienten.Schlange.Count != 0) {
                 patient = Patienten.GetNextPatient();
             }
