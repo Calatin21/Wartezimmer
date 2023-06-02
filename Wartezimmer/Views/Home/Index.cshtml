@@ -7,16 +7,18 @@
     <head>
         <title>Index</title>
         <link rel="stylesheet" href="~/css/StyleSheet.css" />
-    <nav>
-        <li><a asp-action="Index">Home</a></li>
-        <li><a asp-action="PatientenListe">Warteraum</a></li>
-        <li><a asp-action="Arztsicht">Arzt</a></li>
-        <li><a asp-action="Eingabe">Arzthelfer</a></li>
-    </nav>
+    <table>
+        <tr>
+            <td><a asp-action="Index"><button type="button">Home</button></a></td>
+            <td><a asp-action="PatientenListe"><button type="button">Warteraum</button></a></td>
+            <td><a asp-action="Arztsicht"><button type="button">Arzt</button></a></td>
+            <td><a asp-action="Eingabe"><button type="button">Arzthelfer</button></a></td>
+        </tr>
+    </table>
     </head>
 <body>
 	<div class="center">
-	<h1>Wartezimmer</h1>
+	<h1>Wartezimmer</h1>       
 	<div class="button">
         <table> 
             <tr>     

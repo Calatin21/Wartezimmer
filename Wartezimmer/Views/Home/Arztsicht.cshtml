@@ -12,16 +12,18 @@
 }
 <!DOCTYPE html>
 <html>
-
-    <head>
-        <title>Arzt Seite</title>
-    <nav>       
-            <a asp-action="Index"><button type="button">Home</button></a>
-            <a asp-action="PatientenListe"><button type="button">Warteraum</button></a>
-             <a asp-action="Arztsicht"><button type="button">Arzt</button> </a>
-              <a asp-action="Eingabe"><button type="button">Arzthelfer</button></a>   
-    </nav>
-      </head>
+<head>
+    <title>Arztsicht</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <table>
+        <tr>
+            <td><a asp-action="Index"><button type="button">Home</button></a></td>
+            <td><a asp-action="PatientenListe"><button type="button">Warteraum</button></a></td>
+            <td><a asp-action="Arztsicht"><button type="button">Arzt</button></a></td>
+            <td><a asp-action="Eingabe"><button type="button">Arzthelfer</button></a></td>
+        </tr>
+    </table>
+</head>
 <body>
     <label asp-for="@anzahl">Patienten-Anzahl: </label>
     <input asp-for="@anzahl" />
